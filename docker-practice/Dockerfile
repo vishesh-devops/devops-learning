@@ -1,3 +1,5 @@
 FROM ubuntu:latest
+COPY app.txt /app/app.txt
 RUN apt update && apt install -y curl
-CMD ["echo","Hello from my custom Docker image!"]
+CMD ["cat","/app/app.txt"]
+
